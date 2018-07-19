@@ -20,7 +20,7 @@ cd vuepress
 # echo 'www.example.com' > CNAME
 git init
 git remote add blog-pro git@github.com:songkai2012/vue-blog.git
-git pull
+git pull blog-pro
 git add -A
 git commit -m 'deploy'
 git push --set-upstream git@github.com:songkai2012/vue-blog master
