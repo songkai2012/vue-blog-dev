@@ -19,7 +19,7 @@ cd vuepress
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
 git init
-git remote add origin git@github.com:songkai2012/vue-blog.git
+git remote add blog-pro git@github.com:songkai2012/vue-blog.git
 git pull
 git add -A
 git commit -m 'deploy'
