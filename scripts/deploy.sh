@@ -26,6 +26,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f --set-upstream git@github.com:songkai2012/songkai2012.github.io.git master:gh-pages
+git push -f --set-upstream git@github.com:songkai2012/songkai2012.github.io.git master
 
 cd -
