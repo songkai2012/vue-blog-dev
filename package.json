@@ -3,7 +3,7 @@
   "version": "2.0.2",
   "description": "个人博客",
   "main": "lib/index.js",
-  "homepage": "https://github.com/vuejs/vuepress#readme",
+  "homepage": "https://songkai2012.github.io/",
   "bin": {
     "vuepress": "bin/vuepress.js"
   },
@@ -15,11 +15,7 @@
     "release": "/bin/bash scripts/release.sh",
     "test": "node test/prepare.js && jest --config test/jest.config.js",
     "start": "npm run dev",
-    "publish": "/bin/bash scripts/deploy.sh"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vuejs/vuepress.git"
+    "p": "/bin/bash scripts/deploy.sh"
   },
   "keywords": [
     "documentation",
@@ -28,9 +24,6 @@
   ],
   "author": "Evan You",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vuejs/vuepress/issues"
-  },
   "gitHooks": {
     "pre-commit": "lint-staged"
   },

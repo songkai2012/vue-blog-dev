@@ -1,5 +1,5 @@
 module.exports = {
-  base: '/vue-blog/',
+  base: '',
   dest: 'vuepress',
     locales: {
     '/': {
