@@ -27,7 +27,7 @@ module.exports = {
   serviceWorker: true,
   theme: 'vue',
   themeConfig: {
-    repo: 'songkai2012/vue-blog',
+    repo: 'songkai2012/vue-blog-dev',
     editLinks: true,
     docsDir: 'docs',
     locales: {
