@@ -1,4 +1,13 @@
+const path = require('path')
+
 module.exports = {
+  configureWebpack: {
+    resolve: {
+      alias: {
+        '@alias': path.resolve(__dirname, '../public')
+      }
+    }
+  },
   base: '',
   dest: 'vuepress',
     locales: {
@@ -61,69 +70,48 @@ module.exports = {
           {
             text: '面试点',
             link: '/interview/'
+          },
+          {
+            text: '技能',
+            link: '/skill/'
           }
         ],
         sidebar: {
-          '/guide/': [
-            {
-              title:'guide',
-              collapsable: false,
-              children: [
-                '',
-                'getting-started',
-                'basic-config',
-                'assets',
-                'markdown',
-                'using-vue',
-                'custom-themes',
-                'i18n',
-                'deploy'
-              ]
-            }
-          ],
           '/interview/': [{
-            title:'interview',
+            title:'面试',
             collapsable: false,
             children: [
               '',
-              '2018',
-              '2019',
+              'basic',
+              'work',
             ]
-          }]
+          }],
+          '/skill/': [{
+            title:'技能',
+            collapsable: false,
+            children: getWebArr(2)
+          }],
+          '/daily-summary/': [{
+            title:'每日心得',
+            collapsable: false,
+            children: [
+              '',
+              '2018-08',
+              '2018-09',
+              '2018-10',
+              '2018-11',
+              '2018-12',
+            ]
+          },
+            {
+              title:'2019',
+              collapsable: false,
+              children: [
+                '2019-01'
+              ]
+            }]
         }
-      },
-/*      '/zh/': {
-        label: '简体中文',
-        selectText: '选择语言',
-        editLinkText: '在 GitHub 上编辑此页',
-        lastUpdated: '上次更新',
-        nav: [
-          {
-            text: '指南',
-            link: '/zh/guide/',
-          },
-          {
-            text: '指南2',
-            link: '/zh/guide1/',
-          },
-          {
-            text: '配置',
-            link: '/zh/config/'
-          },
-          {
-            text: '默认主题',
-            link: '/zh/default-theme-config/'
-          },
-          {
-            text: 'Changelog',
-            link: 'https://github.com/vuejs/vuepress/blob/master/CHANGELOG.md'
-          }
-        ],
-        sidebar: {
-          '/zh/guide/': genSidebarConfig('指南'),
-          '/zh/guide1/': genSidebarConfig('指南11')
-        }
-      }*/
+      }
     }
   }
 }
@@ -146,4 +134,13 @@ function genSidebarConfig (title) {
       ]
     }
   ]
+}
+
+function getWebArr(count) {
+  let arr = []
+  while (count) {
+    arr.push(`web${count--}`)
+  }
+  arr.push('')
+  return arr.reverse()
 }
